@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ALICERAD - Electron Identification with the LHC ALICE Transition Radiation Detector</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+   <!-- Navigation -->
+   <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="index.html#">ALICERAD</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="index.html#overview">Overview</a>
+                    </li>
+                    <li>
+                        <a href="pidgeneration.html">PID Generation</a>
+                    </li>
+                     <li>
+                        <a href="particleidentification.html">Particle Identification</a>
+                    </li>
+                    <li>
+                        <a href="downloads.html">Downloads</a>
+                    </li>
+                    <li>
+                        <a href="contacts.html">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+ <!-- Header -->
+     <!-- Change this to banner -->
+    <a name="about"></a>
+    <div class="bannertoppid">
+       <center>
+            <h1>PID Generation</h1>
+                <h3>Online Particle Identifier Number Generator Algorithms created with Artificial Neural Networks for Particle Identification</h3>
+                <hr class="intro-divider">
+                <ul class="list-inline intro-social-buttons">
+                    <li>
+                        <a href="https://github.com/ryanwongsa/Honours-Project" class="btn btn-default btn-lg" ><i class="fa fa-github fa-fw"></i> <span class="network-name">PID Generation</span></a>
+                    </li>
+                </ul>
+                <br><br>
+
+            <ul class="list-inline">
+                <li class="lead">Ryan Wong</li>
+            </ul>
+        </center>
+    </div>
+    <!-- /.intro-header -->
+
+
+
+    <a  name="background"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="title text-center">
+                    <h2 class="section-heading">Background</h2>
+                </div>
+                    <p class="lead">
+                    The ALICE Transition Radiation Detector (TRD) at CERN is planned for a major upgrade in 2017/18. One of the main tasks of the ALICE TRD is the identification of particles, mainly electrons and pions. The upgrade will increase interaction rate of particles, which means new particle identification algorithms need to be developed. The particle identification algorithms are divided into online and offline algorithms. The online algorithms are used to determine the most effective data to be stored by the TRD while the offline algorithms use the data to determine the classification of the particles.<br>
+
+                    The focus of this section is the development of the online algorithm to create an 8-bit value known as a Particle Identifier (PID) number. The PID number is used to represent a particle’s tracklet obtained from the TRD.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+     <a  name="aim"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="title text-center">
+                    <h2 class="section-heading">Aim</h2>
+
+                    <p class="lead">
+                    The new hardware limiations of ALICE requires the development of a new online storage algorithm. This means there is a need to determine a new efficient and effective algorithm to store PID numbers which replaces the current tracklet information.<br><br>
+
+                    This project aims to determine whether the use artificial neural networks are better suited for PID generation than a summation approach. Additionally the artificial neural network approach is tested to determine the most effective structure for the neural network for the online PID generation algorithm.</p>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <a  name="approach"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="title text-center">
+                    <h2 class="section-heading">Approach</h2>
+                </div>
+                <p class="lead">
+                    The summation approach and the approach using artificial neural networks are compared based on pion efficiencies and the PID frequency distribution from the results from simulated data created with AliRoot. The pion efficiency is used to determine the number of pions misclassified as electrons at a fixed electron efficiency. The electron efficiency that is generally used is 90%.<br><br>
+
+                    The approach using artificial neural networks to create 8-bit PID numbers are divided into two sections. The first approach creates a single 8-bit PID number and the second creates two 4-bit PID numbers. Each of the artificial neural networks are tested with different input types. These inputs are either the raw tracklet information, preprocessed variables or both. The preprocessed variables are based on observations from the average tracklet results from thousands of particles.<br>
+                    The artificial neural networks are trained with supervised learning with the backpropagation algorithm. The training data used was from particles created with simulations from AliRoot.
+                    <center>
+                    <img class="img-responsive" src="graphs/TimeBinADC.png" alt="" width="50%" height="50%">
+                    <figcaption>Figure 1. Histogram representing the average ADC signal for each time bin.  Electrons are represented in red and pions in blue.  The average result is obtained from 2000 particles.</figcaption>
+                    </center>
+                </p>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+     <a  name="results"></a>
+    <div class="content-section-b">
+
+        <div class="container">
+            <div class="row">
+                <div class="title text-center">
+                    <h2 class="section-heading">Results</h2>
+
+                </div>
+                   <p class="lead">
+
+                   In this project, the summation approach and artificial neural network approach have been tested on simulated data to determine which will be better suited to the upgraded system at ALICE.
+                   <br><br>
+                   The summation approach was found to produce worse results than the neural network approach. The PID numbers for the summation approach tended to be grouped for electrons and pions at low PID numbers. The pion efficiency produced with the summation approach was 57.7% at an electron efficiency of 90% which is significantly high. The artificial neural network approach produced pion efficiencies which ranged between 40% and 55% depending on the network used. The neural network approach also improved on the summation approach by creating PID numbers which went across the whole PID range and created a clear division between pions and electrons.
+                   </p>
+                   <center>
+                    <img class="img-responsive" src="graphs/BestApproaches.png" alt="" width="50%" height="50%">
+                    <figcaption>Figure 2. Pion efficiencies of the best networks for each input type. The blue indicates the one 8-bit PID approach and the red indicates the two 4-bit PID approach.</figcaption>
+                    </center>
+                    <br>
+                    <p class="lead">
+                   The artificial neural network approach that created two 4-bit PID numbers showed improved results compared to the summation approach as the pion efficiencies were generally lower. <br>
+                   Additionally the inputs from both preprocessed variables and raw tracklet data showed improved results than only using the raw tracklet data or only preprocessed variables.
+                   </p>
+                   <center>
+                    <img class="img-responsive" src="graphs/BothANNSum.png" alt="" width="50%" height="50%">
+                    <figcaption>Figure 3. PID frequency distribution of the summation approach (blue) and an example ANN approach (red). The light blue represents the pions and dark blue represents electrons. The dark red represents the electrons and light red represents the pions.</figcaption>
+                    </center>
+                   
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+
+     <a  name="Conclusions"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="title text-center">
+                    <h2 class="section-heading">Conclusions</h2>
+                </div>
+
+                 <p class="lead">
+                    The results from simulated particle data showed that the approach using artificial neural networks produced better pion efficiencies and PID freqency distributions than the summation approach. <br>
+                    The artificial neural network approach that used inputs from preprocessed variables and unprocessed variables that created two 4-bit PID numbers showed improved results compared to the other networks tested and has potential for the implementation in online PID generation algorithms. 
+                 </p>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+   <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="index.html#">Home</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                        <a href="index.html#overview">Overview</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                        <a href="pidgeneration.html">PID Generation</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                        <a href="particleidentification.html">Particle Identification</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                        <a href="downloads.html">Downloads</a>
+                        </li>
+                        <li class="footer-menu-divider">&sdot;</li>
+                        <li>
+                        <a href="contacts.html">Contacts</a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted small">University of Cape Town, Department of Computer Science, 2015 </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
